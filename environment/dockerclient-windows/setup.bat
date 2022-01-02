@@ -1,0 +1,2 @@
+setx DOCKER_HOST "192.168.56.102:2375"
+pause

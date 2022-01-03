@@ -1,6 +1,6 @@
 # Coding Challenges
 
-This repo is being used to portfolio my attempts at various coding challeneges.
+This repo is being used to portfolio my attempts at various coding challenges.
 
 ## Runtimes and compile envionrments
 

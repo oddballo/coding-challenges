@@ -2,7 +2,7 @@
 
 This repo is being used to portfolio my attempts at various coding challenges.
 
-## Runtimes and compile envionrments
+## Runtimes and compile environments
 
 Docker is being used faciliate runtime and, where necessary compile, environment.
 

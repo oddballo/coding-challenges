@@ -19,7 +19,4 @@ To validate coding challeneges, an automated test is written per challenge.
 
 ## Challenges
 
-### Hello World
-Requirement: echo "Hello World" to standard out
-Location: challenge/001-hello-world
-Languages: PHP, Java, C++, Python
+Challenges are in their own folders inside the "challenges" folder.

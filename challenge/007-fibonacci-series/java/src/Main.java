@@ -1,8 +1,6 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// Setup - format the input argument into a int array as intended by the task
-		// Exit 2 to represent validation error
 		if (args.length != 1) {
 			System.err.println("Usage; java Main \"<Upto>\"");
 			System.exit(2);

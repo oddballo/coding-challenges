@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
@@ -17,7 +18,7 @@ public class Main {
 
 		int keyLength = Integer.parseInt(args[1]);
 
-		integers = radixSort(integers, keyLength);
+		radixSort(integers, keyLength);
 		print(integers);
 	}
 
@@ -31,9 +32,9 @@ public class Main {
 		System.out.println(String.format("%d", array[array.length-1]));
 	}
 
-	private static Integer[] radixSort(Integer[] array, final int keyLength){
+	private static void radixSort(final Integer[] array, final int keyLength){
 		if(array.length < 2){
-			return array;
+			return;
 		}
 
 		ArrayList<ArrayList<Integer>> buckets;
@@ -47,10 +48,12 @@ public class Main {
 						/ (int)Math.pow(BUCKET_SIZE, significantBit-1);
 				buckets.get(key).add(integer);
 			}
-			array = buckets.stream()
+			final AtomicInteger id = new AtomicInteger(0);
+			buckets.stream()
 					.flatMap(Collection::stream)
-					.toArray(Integer[]::new);
+					.forEachOrdered(value -> {
+						array[id.getAndIncrement()] = value;
+					});
 		}
-		return array;
 	}
 }

@@ -1,9 +1,6 @@
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
-
-    static final int BUCKET_SIZE = 10;
 
     public static void main(final String[] args) {
         if (args.length != 1) {
